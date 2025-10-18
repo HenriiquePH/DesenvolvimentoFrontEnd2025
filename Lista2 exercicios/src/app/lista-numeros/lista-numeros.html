@@ -1,0 +1,26 @@
+<div class="cardPrincipal">
+  <h2>Lista de soma e média dos números</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="novoNumero"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o número"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <button class="botaoPadrao" (click)="adicionarNumero()">Adicionar</button>
+
+    <!-- Lista de números -->
+    <ul>
+      <li *ngFor="let numero of listaNumeros; let i = index">
+        {{ numero }}
+        <button class="botaoPadrao" (click)="removerNumero(i)">Remover</button>
+      </li>
+    </ul>
+
+    <p>Soma: {{ soma }}</p>
+    <p>Média: {{ media }}</p>
+  </div>
+</div>

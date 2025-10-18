@@ -1,0 +1,41 @@
+<div class="cardPrincipal">
+  <h2>Lista de Compras</h2>
+
+  <div style="margin-bottom: 1rem">
+    <!-- Input do nome do produto -->
+    <input
+      [(ngModel)]="novoProduto"
+      class="inputPadrao"
+      type="text"
+      placeholder="Informe o nome do produto"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <!-- Input do preço do produto -->
+    <input
+      [(ngModel)]="novoPreco"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o preço do produto"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <!-- Botão adicionar -->
+    <button class="botaoPadrao" (click)="adicionarProduto()">
+      Adicionar Produto
+    </button>
+
+    <!-- Lista de produtos -->
+    <ul>
+      <li *ngFor="let produto of listaProdutos; let i = index">
+        {{ produto.nome }} - R$ {{ produto.preco }}
+        <button class="botaoPadrao" (click)="removerProduto(i)">Remover</button>
+      </li>
+    </ul>
+
+    <!-- Valor total da compra -->
+    <p *ngIf="total !== null" style="margin-top: 1rem; font-weight: bold">
+      Total: R$ {{ total }}
+    </p>
+  </div>
+</div>
