@@ -1,0 +1,21 @@
+<div class="cardPrincipal">
+  <h2>Busca de produto</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="codigo"
+      class="inputPadrao"
+      type="string"
+      placeholder="Informe o código do produto"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <button class="botaoPadrao" (click)="verificarProduto()">
+      Consultar código
+    </button>
+
+    <div *ngIf="codigo !== null" style="margin-top: 1rem; font-weight: bold">
+      Resultado: {{ produto }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="cardPrincipal">
+  <h2>Calcular quilos</h2>
+  <div style="margin-button: 1rem">
+    <input
+      [(ngModel)]="valorQuilo"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe o valor do quilo do produto"
+      style="margin-bottom: 0, 5rem"
+    />
+    <input
+      [(ngModel)]="quilosConsumido"
+      type="number"
+      class="inputPadrao"
+      placeholder="Informe os quilos consumidos"
+      style="margin-botton: 0, 5rem"
+    />
+
+    <button class="botaoPadrao" (click)="calculo()">
+      Calcular valor a ser pago
+    </button>
+
+    <div *ngIf="calculo !== null">Resultado: {{ valorFinal }}</div>
+  </div>
+</div>

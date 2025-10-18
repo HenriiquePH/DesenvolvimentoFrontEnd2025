@@ -1,0 +1,43 @@
+<div class="cardPrincipal">
+  <h2>Validação de menor número</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="valor1"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe um número"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <input
+      [(ngModel)]="valor2"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe um número"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <input
+      [(ngModel)]="valor3"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe um número"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <input
+      [(ngModel)]="valor4"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe um número"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <button class="botaoPadrao" (click)="validarMenor()">Validar menor número</button>
+
+    <div
+      *ngIf="menorValor !== null" style="margin-top: 1rem; font-weight: bold"> Resultado: {{ menorValor }}
+    </div>
+  </div>
+</div>

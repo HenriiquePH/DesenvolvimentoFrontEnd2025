@@ -1,0 +1,18 @@
+<div class="cardPrincipal">
+  <h2>Calculadora de reajuste de 1%</h2>
+  <div style="margin-button: 1rem">
+    <input
+      [(ngModel)]="valorSaldo"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe um saldo"
+      style="margin-bottom: 0, 5rem"
+    />
+
+    <button class="botaoPadrao" (click)="calcularReajuste()">
+      Calcular rajuste de 1%
+    </button>
+
+    <div *ngIf="calcularReajuste !== null">Resultado: {{valorFinal}}</div>
+  </div>
+</div>

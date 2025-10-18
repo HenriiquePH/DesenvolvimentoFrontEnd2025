@@ -1,0 +1,21 @@
+<div class="cardPrincipal">
+  <h2>Verificar se o número é impar</h2>
+
+  <div style="margin-bottom: 1rem">
+    <input
+      [(ngModel)]="valor"
+      class="inputPadrao"
+      type="number"
+      placeholder="Informe um número"
+      style="margin-bottom: 0.5rem"
+    />
+
+    <button class="botaoPadrao" (click)="validarNumero()">
+      Validar menor número
+    </button>
+
+    <div *ngIf="resultado !== null" style="margin-top: 1rem; font-weight: bold">
+      Resultado: {{ resultado }}
+    </div>
+  </div>
+</div>
